@@ -52,7 +52,8 @@ header {
     border-radius: 5px;
 }
 
-.nav {
+
+ul {
     display: flex;
     list-style-type: none;
     gap: 4%;
@@ -69,23 +70,143 @@ header {
 }
 
 .btn {
-    height: 80%;
-    width: 20%;
-    margin-right: 2%;
+    margin-right: 4%;
 }
 
 .btn1 {
-    width: 100%;
-    height: 100%;
+    display: inline-block;
+    padding: 12px 24px;
     background-color: var(--accent);
     color: var(--neutral-light);
-    border-radius: 25px;
-    border: none;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+    cursor: pointer;
 }
 
 .btn1:hover {
+    background-color: var(--neutral-light); 
+    color: var(--accent);
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--secondary-light);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 10vh;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container p {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.innerC {
+    display: flex;
+    justify-content: space-around;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+    color: var(--neutral-light);
+    background-color: var(--primary-dark);
+    padding: 5% 5%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #0f62fe;
+    outline: none;
+}
+
+.form-inline {
+    display: flex;
+    gap: 15px;
+}
+
+.submitBtn {
+    background-color: var(--accent);
+    color: var(--neutral-light);
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.submitBtn:hover {
     background-color: var(--neutral-light);
     color: var(--accent);
+}
+
+.direct-chat {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.direct-chat h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: bolder;
+}
+
+.direct-chat p {
+    margin-bottom: 12px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.social-icons a .fa-brands {
+    width: 100%;
+    height: 100%;
+    color: var(--primary-dark);
 }
 
 .hero {
@@ -118,6 +239,7 @@ header {
     left: 3%;
     top: 40%;
     object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0.7, 0.7, 0.7, 0.7);
 }
 
 .heroImages .heroImgContainer .img2 {
@@ -127,6 +249,7 @@ header {
     left: 65%;
     top: 28%;
     object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0.7, 0.7, 0.7, 0.7);
 }
 
 .heroImages .heroImgContainer .img3 {
@@ -136,6 +259,7 @@ header {
     left: 65%;
     top: 71%;
     object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0.7, 0, 0, 0);
 }
 
 .hero .hbtn button {
@@ -539,6 +663,28 @@ textarea:focus {
     color: var(--accent);
 }
 
+/* WhatsApp button styling */
+.whatsapp-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #25D366;
+    color: white;
+    font-size: 28px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    margin-top: 15px;
+    /* space above */
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    background-color: #1ebe5d;
+}
+
 
 footer {
     height: 20vh;
@@ -590,6 +736,19 @@ footer p {
 }
 
 @media (max-width: 600px) {
+    .innerC {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .booking-form {
+        width: 100%;
+    }
+
+    .intro {
+        font-weight: bold;
+    }
 
     header {
         height: 10vh;
@@ -616,6 +775,21 @@ footer p {
     .nav ul {
         flex-direction: column;
         gap: 15px;
+        align-items: end;
+    }
+
+    .nav.active {
+        display: flex;
+        /* background: transparent; */
+    }
+
+    .nav.active ul {
+        position: absolute;
+        right: 0;
+        background: var(--primary-dark);
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        width: auto;
     }
 
     .hamburger {
@@ -626,8 +800,9 @@ footer p {
         display: none;
     }
 
-    .nav.active {
-        display: flex;
+    .hamburger.open span {
+        background: #f00;
+        /* example: change color when open */
     }
 
     .hero {
@@ -635,42 +810,57 @@ footer p {
         width: 100%;
         justify-content: space-between;
         flex-direction: column-reverse;
+        /* border: 2px solid red; */
+        margin-top: 10vh;
     }
 
     .heroImages {
         width: 100%;
-        height: 70%;
+        height: 50%;
+        position: static;
+        /* border: 2px solid red; */
+        margin-bottom: 50%;
+        position: static;
     }
 
     .heroImages .heroImgContainer {
-        display: flex;
-        flex-direction: column;
         margin-left: 0%;
         width: 100%;
         height: 100%;
+        top: 0;
+        position: relative;
     }
 
     .heroImages .heroImgContainer .img1 {
         width: 50%;
-        height: 60%;
+        height: 70%;
         border-radius: 10px;
-        top: 5%;
+        top: 15%;
     }
 
     .heroImages .heroImgContainer .img2 {
         width: 40%;
-        height: 35%;
-        top: 0%;
+        height: 45%;
+        top: 5%;
         left: 58%;
         border-radius: 10px;
     }
 
     .heroImages .heroImgContainer .img3 {
         width: 40%;
-        height: 35%;
+        height: 45%;
         left: 58%;
-        top: 40%;
+        top: 55%;
         border-radius: 10px;
+    }
+
+    .hero .hbtn {
+        height: 17%;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15%;
     }
 
     .hero .hbtn button {
@@ -679,20 +869,17 @@ footer p {
         height: 7%;
         width: 40%;
         border-radius: 20px;
-        border: none;
-        position: absolute;
         display: block;
-        top: 95%;
-        left: 30%;
     }
 
     .heroText {
         width: 100%;
         height: 12%;
-        margin-top: 5%;
+        margin-top: 10%;
         text-align: center;
         display: flex;
         flex-direction: column;
+        position: static;
     }
 
     .heroText h1 {
@@ -713,7 +900,7 @@ footer p {
     }
 
     .about {
-        height: 100vh; 
+        height: 100vh;
         width: 100%;
         padding: 40px 20px;
         flex-direction: column;
@@ -730,7 +917,7 @@ footer p {
     }
 
     .aboutInnerC {
-        flex-direction: column; 
+        flex-direction: column;
         width: 90%;
         height: 90%;
         gap: 20px;
@@ -745,7 +932,7 @@ footer p {
     }
 
     .about .textSection h1 {
-        display: none; 
+        display: none;
     }
 
     .about .textSection p {
@@ -755,7 +942,7 @@ footer p {
     }
 
     .about .textSection button {
-        display: none; 
+        display: none;
     }
 
     .about .imgSection {
@@ -771,13 +958,14 @@ footer p {
     }
 
     .about .aboutButton {
-        display: block; 
+        display: block;
         font-size: 1.2rem;
         height: 100% !important;
         width: 70%;
         padding: 12px 12px;
-        color: rgb(250,243,224);
+        color: rgb(250, 243, 224);
     }
+
     .service {
         height: 100vh;
         width: 100%;
@@ -936,8 +1124,8 @@ footer p {
     }
 
     footer {
-        height: auto;              
-        padding: 20px 10px;        
+        height: auto;
+        padding: 20px 10px;
         text-align: center;
     }
 
@@ -947,11 +1135,11 @@ footer p {
     }
 
     .footerNav ul {
-        flex-direction: column;    
-        gap: 12px;                
+        flex-direction: column;
+        gap: 12px;
         padding: 0;
         margin: 0;
-        align-items: center;       
+        align-items: center;
     }
 
     .footerNav li {
@@ -959,7 +1147,7 @@ footer p {
     }
 
     .footerNav a {
-        font-size: 14px;           
+        font-size: 14px;
     }
 
     .footerContact p {
@@ -968,6 +1156,32 @@ footer p {
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
+    .innerC {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .booking-form {
+        width: 100%;
+    }
+
+
+    .container h1 {
+        font-size: 3.5rem;
+    }
+
+    .container p {
+        font-size: 2rem;
+    }
+
+    .direct-chat h2 {
+        font-size: 2rem;
+    }
+
+    .submitBtn {
+        font-size: 1.5rem;
+    }
 
     header {
         height: 10vh;
@@ -994,6 +1208,21 @@ footer p {
     .nav ul {
         flex-direction: column;
         gap: 15px;
+        align-items: end;
+    }
+
+    .nav.active {
+        display: flex;
+        /* background: transparent; */
+    }
+
+    .nav.active ul {
+        position: absolute;
+        right: 0;
+        background: var(--primary-dark);
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        width: auto;
     }
 
     .hamburger {
@@ -1095,7 +1324,7 @@ footer p {
     }
 
     .about {
-        height: 100vh; 
+        height: 100vh;
         width: 100%;
         padding: 20% 5%;
         flex-direction: column;
@@ -1112,7 +1341,7 @@ footer p {
     }
 
     .aboutInnerC {
-        flex-direction: column; 
+        flex-direction: column;
         width: 90%;
         height: 90%;
         gap: 20px;
@@ -1127,7 +1356,7 @@ footer p {
     }
 
     .about .textSection h1 {
-        display: none; 
+        display: none;
     }
 
     .about .textSection p {
@@ -1137,7 +1366,7 @@ footer p {
     }
 
     .about .textSection button {
-        display: none; 
+        display: none;
     }
 
     .about .imgSection {
@@ -1153,13 +1382,14 @@ footer p {
     }
 
     .about .aboutButton {
-        display: block; 
+        display: block;
         font-size: 2rem;
         height: 100% !important;
         width: 60%;
         padding: 25px 25px;
-        color: rgb(250,243,224);
+        color: rgb(250, 243, 224);
     }
+
     .service {
         height: 100vh;
         width: 100%;
@@ -1185,7 +1415,7 @@ footer p {
         width: 100%;
     }
 
-    .service .imgs h3{
+    .service .imgs h3 {
         font-size: 2rem;
     }
 
@@ -1316,11 +1546,11 @@ footer p {
         gap: 2rem;
     }
 
-    .form-row input{
+    .form-row input {
         font-size: 2rem;
     }
 
-    .contact-form input{
+    .contact-form input {
         font-size: 2rem;
     }
 
@@ -1336,8 +1566,8 @@ footer p {
     }
 
     footer {
-        height: auto;              
-        padding: 20px 10px;        
+        height: auto;
+        padding: 20px 10px;
         text-align: center;
     }
 
@@ -1347,11 +1577,11 @@ footer p {
     }
 
     .footerNav ul {
-        flex-direction: column;    
-        gap: 12px;                
+        flex-direction: column;
+        gap: 12px;
         padding: 0;
         margin: 0;
-        align-items: center;       
+        align-items: center;
     }
 
     .footerNav li {
@@ -1359,7 +1589,7 @@ footer p {
     }
 
     .footerNav a {
-        font-size: 2rem;           
+        font-size: 2rem;
     }
 
     .footerContact p {
@@ -1369,6 +1599,15 @@ footer p {
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
+    .innerC {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .booking-form {
+        width: 100%;
+    }
 
     header {
         height: 10vh;
@@ -1496,7 +1735,7 @@ footer p {
     }
 
     .about {
-        height: 100vh; 
+        height: 100vh;
         width: 100%;
         padding: 20% 5%;
         flex-direction: column;
@@ -1513,7 +1752,7 @@ footer p {
     }
 
     .aboutInnerC {
-        flex-direction: column; 
+        flex-direction: column;
         width: 90%;
         height: 90%;
         gap: 20px;
@@ -1528,7 +1767,7 @@ footer p {
     }
 
     .about .textSection h1 {
-        display: none; 
+        display: none;
     }
 
     .about .textSection p {
@@ -1538,7 +1777,7 @@ footer p {
     }
 
     .about .textSection button {
-        display: none; 
+        display: none;
     }
 
     .about .imgSection {
@@ -1554,13 +1793,14 @@ footer p {
     }
 
     .about .aboutButton {
-        display: block; 
+        display: block;
         font-size: 2rem;
         height: 100% !important;
         width: 60%;
         padding: 25px 25px;
-        color: rgb(250,243,224);
+        color: rgb(250, 243, 224);
     }
+
     .service {
         height: 100vh;
         width: 100%;
@@ -1586,7 +1826,7 @@ footer p {
         width: 100%;
     }
 
-    .service .imgs h3{
+    .service .imgs h3 {
         font-size: 2rem;
     }
 
@@ -1717,11 +1957,11 @@ footer p {
         gap: 2rem;
     }
 
-    .form-row input{
+    .form-row input {
         font-size: 2rem;
     }
 
-    .contact-form input{
+    .contact-form input {
         font-size: 2rem;
     }
 
@@ -1737,8 +1977,8 @@ footer p {
     }
 
     footer {
-        height: auto;              
-        padding: 20px 10px;        
+        height: auto;
+        padding: 20px 10px;
         text-align: center;
     }
 
@@ -1748,11 +1988,11 @@ footer p {
     }
 
     .footerNav ul {
-        flex-direction: column;    
-        gap: 12px;                
+        flex-direction: column;
+        gap: 12px;
         padding: 0;
         margin: 0;
-        align-items: center;       
+        align-items: center;
     }
 
     .footerNav li {
@@ -1760,11 +2000,10 @@ footer p {
     }
 
     .footerNav a {
-        font-size: 2rem;           
+        font-size: 2rem;
     }
 
     .footerContact p {
         font-size: 2rem;
     }
 }
-
