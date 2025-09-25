@@ -87,7 +87,7 @@ ul {
 }
 
 .btn1:hover {
-    background-color: var(--neutral-light); 
+    background-color: var(--neutral-light);
     color: var(--accent);
 }
 
@@ -505,7 +505,7 @@ textarea:focus {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
+    /* width: 100%; */
     background: rgb(250, 243, 224);
 }
 
@@ -904,7 +904,7 @@ footer p {
         width: 100%;
         padding: 40px 20px;
         flex-direction: column;
-        justify-content:space-around;
+        justify-content: space-around;
         align-items: center;
         /* padding-top: 5%; */
         /* padding-bottom: 5%; */
@@ -1038,7 +1038,9 @@ footer p {
     }
 
     .recentProjects {
-        height: auto;
+        height: 100vh;
+        /* padding-top: 0%; */
+        /* margin-top: 0; */
         padding: 40px 15px;
     }
 
@@ -1049,8 +1051,10 @@ footer p {
     }
 
     .projectItemCarouselGrid {
+        height: 80vh;
         grid-template-columns: 1fr;
         width: 100%;
+        /* margin-top: 0; */
         gap: 30px;
     }
 
@@ -1878,7 +1882,7 @@ footer p {
     }
 
     .recentProjects {
-        height: auto;
+        height: 100vh;
         padding: 40px 15px;
     }
 
@@ -1889,10 +1893,10 @@ footer p {
     }
 
     .projectItemCarouselGrid {
+        height: 80vh;
         grid-template-columns: 1fr;
         width: 100%;
         gap: 30px;
-        padding: 5% 5%;
     }
 
     .projectItemCarousel {
@@ -1901,7 +1905,7 @@ footer p {
     }
 
     .projectItemSlides {
-        height: 200px;
+        height: 300px;
     }
 
     .projectItemSlide {
@@ -1911,20 +1915,18 @@ footer p {
 
     .prev,
     .next {
-        padding: 18px;
-        font-size: 2rem;
+        padding: 8px;
+        font-size: 24px;
     }
 
     .projectItemCarousel h3 {
         font-size: 2.5rem;
         margin-top: 10px;
-        font-weight: bolder;
     }
 
     .projectItemCarousel p {
-        font-size: 1.9rem;
+        font-size: 1.5rem;
         padding: 0 10px 15px;
-        font-weight: bold;
     }
 
     .contact-section {
