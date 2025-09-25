@@ -1661,6 +1661,15 @@ footer p {
         display: flex;
     }
 
+    .nav.active ul {
+        position: absolute;
+        right: 0;
+        background: var(--primary-dark);
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        width: auto;
+    }
+
     .hero {
         height: 100vh;
         width: 100%;
