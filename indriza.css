@@ -262,20 +262,30 @@ textarea:focus {
     box-shadow: 0 10px 30px rgba(0.7, 0, 0, 0);
 }
 
-.hero .hbtn button {
-    background-color: var(--accent);
-    color: var(--neutral-light);
-    height: 7%;
-    width: 20%;
-    border-radius: 20px;
-    border: none;
+.hero .heroImages .btn3 {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 220px;
+    transition: all 0.3s ease;
+    cursor: pointer;
     position: absolute;
     display: none;
 }
 
-.hero .hbtn button:hover {
-    background-color: var(--neutral-light);
+.hero .heroImages .btn3:hover {
+    background-color:  var(--neutral-light);
     color: var(--accent);
+}
+
+.btn {
+    text-align: center;
 }
 
 .heroText {
@@ -302,19 +312,25 @@ textarea:focus {
     font-weight: 900;
 }
 
-.hero .heroText button {
+.heroText .btn2 {
+    display: inline-block;
     background-color: var(--accent);
     color: var(--neutral-light);
-    height: 7%;
-    width: 20%;
-    border-radius: 20px;
-    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 220px;
+    transition: all 0.3s ease;
+    cursor: pointer;
     position: absolute;
     top: 70%;
-    right: 30%;
+    right: 23.5%;
 }
 
-.hero button:hover {
+.heroText .btn2:hover {
     background-color: var(--neutral-light);
     color: var(--accent);
 }
@@ -854,22 +870,28 @@ footer p {
         border-radius: 10px;
     }
 
-    .hero .hbtn {
-        height: 17%;
-        width: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 15%;
-    }
-
-    .hero .hbtn button {
+    .hero .heroImages .btn3 {
+        display: inline-block;
         background-color: var(--accent);
         color: var(--neutral-light);
+        padding: 12px 24px;
+        text-align: center;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 600;
+        width: 50%;
         height: 7%;
-        width: 40%;
         border-radius: 20px;
-        display: block;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        position: absolute;
+        top: 95%;
+        left: 24%;
+    }
+
+    .btn3:hover {
+        background-color: var(--neutral-light);
+        color: var(--accent);
     }
 
     .heroText {
@@ -895,7 +917,7 @@ footer p {
         position: static;
     }
 
-    .heroText button {
+    .heroText .btn2 {
         display: none;
     }
 
@@ -906,8 +928,6 @@ footer p {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        /* padding-top: 5%; */
-        /* padding-bottom: 5%; */
     }
 
     .about .heading {
@@ -915,7 +935,6 @@ footer p {
         font-size: 1.8rem;
         margin-bottom: 20px;
         text-align: center;
-        /* margin-top: 15%; */
         color: var(--primary-dark);
     }
 
@@ -963,11 +982,9 @@ footer p {
     .about .aboutButton {
         display: block;
         font-size: 1.2rem;
-        /* height: 20% !important; */
         width: 70%;
         padding: 12px 12px;
         color: rgb(250, 243, 224);
-        /* margin-bottom: 15%; */
     }
 
     .service {
@@ -1039,8 +1056,6 @@ footer p {
 
     .recentProjects {
         height: 100vh;
-        /* padding-top: 0%; */
-        /* margin-top: 0; */
         padding: 40px 15px;
     }
 
@@ -1054,7 +1069,6 @@ footer p {
         height: 80vh;
         grid-template-columns: 1fr;
         width: 100%;
-        /* margin-top: 0; */
         gap: 30px;
     }
 
@@ -1226,7 +1240,6 @@ footer p {
 
     .nav.active {
         display: flex;
-        /* background: transparent; */
     }
 
     .nav.active ul {
@@ -1294,21 +1307,29 @@ footer p {
         border-radius: 10px;
     }
 
-    .hero .hbtn button {
+    .hero .heroImages .btn3 {
+        display: inline-block;
         background-color: var(--accent);
         color: var(--neutral-light);
-        height: 7%;
+        padding: 12px 24px;
+        text-align: center;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 600;
         width: 50%;
+        height: 7%;
         border-radius: 20px;
-        border: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
         position: absolute;
-        display: block;
         top: 95%;
-        left: 30%;
-        font-size: 2rem;
-        padding: 2% 5%;
+        left: 24%;
     }
 
+    .btn3:hover {
+        background-color: var(--neutral-light);
+        color: var(--accent);
+    }
     .heroText {
         width: 100%;
         height: 15%;
@@ -1714,19 +1735,35 @@ footer p {
         border-radius: 10px;
     }
 
-    .hero .hbtn button {
+    .hero .heroImages .btn3 {
+        display: inline-block;
         background-color: var(--accent);
+        /* button background */
         color: var(--neutral-light);
-        height: 7%;
+        /* text color */
+        /* padding: 12px 10px; */
+        text-align: center;
+        /* text-decoration: none; */
+        /* remove underline */
+        border-radius: 6px;
+        font-size: 26px;
+        font-weight: 600;
         width: 50%;
-        border-radius: 20px;
-        border: none;
+        height: 7%;
+        border-radius: 30px;
+        /* set fixed width */
+        transition: all 0.3s ease;
+        cursor: pointer;
         position: absolute;
-        display: block;
         top: 95%;
-        left: 30%;
-        font-size: 2rem;
-        padding: 2% 5%;
+        left: 24%;
+        /* display: none; */
+    }
+
+    /* Hover effect */
+    .btn3:hover {
+        background-color: var(--neutral-light);
+        color: var(--accent);
     }
 
     .heroText {
@@ -1752,7 +1789,7 @@ footer p {
         position: static;
     }
 
-    .heroText button {
+    .heroText .btn2  {
         display: none;
     }
 
