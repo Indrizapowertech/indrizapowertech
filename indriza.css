@@ -207,6 +207,7 @@ textarea:focus {
     width: 100%;
     height: 100%;
     color: var(--primary-dark);
+    font-size: x-large;
 }
 
 .hero {
@@ -264,8 +265,8 @@ textarea:focus {
 
 .hero .heroImages .btn3 {
     display: inline-block;
-    background-color: #007bff;
-    color: #fff;
+    background-color: var(--accent);
+    color: var(--neutral-light);
     padding: 12px 24px;
     text-align: center;
     text-decoration: none;
@@ -280,7 +281,7 @@ textarea:focus {
 }
 
 .hero .heroImages .btn3:hover {
-    background-color:  var(--neutral-light);
+    background-color: var(--neutral-light);
     color: var(--accent);
 }
 
@@ -766,6 +767,10 @@ footer p {
         font-weight: bold;
     }
 
+    .social-icons {
+        justify-content: center;
+    }
+
     header {
         height: 10vh;
         padding: 10px;
@@ -796,7 +801,6 @@ footer p {
 
     .nav.active {
         display: flex;
-        /* background: transparent; */
     }
 
     .nav.active ul {
@@ -818,7 +822,6 @@ footer p {
 
     .hamburger.open span {
         background: #f00;
-        /* example: change color when open */
     }
 
     .hero {
@@ -826,7 +829,6 @@ footer p {
         width: 100%;
         justify-content: space-between;
         flex-direction: column-reverse;
-        /* border: 2px solid red; */
         margin-top: 10vh;
     }
 
@@ -834,7 +836,6 @@ footer p {
         width: 100%;
         height: 50%;
         position: static;
-        /* border: 2px solid red; */
         margin-bottom: 50%;
         position: static;
     }
@@ -1203,7 +1204,11 @@ footer p {
     }
 
     .direct-chat h2 {
-        font-size: 2rem;
+        font-size: 3rem;
+    }
+
+    .social-icons {
+        justify-content: center;
     }
 
     .submitBtn {
@@ -1330,6 +1335,7 @@ footer p {
         background-color: var(--neutral-light);
         color: var(--accent);
     }
+
     .heroText {
         width: 100%;
         height: 15%;
@@ -1643,6 +1649,22 @@ footer p {
         width: 100%;
     }
 
+
+    .container h1 {
+        font-size: 3.5rem;
+    }
+
+    .container p {
+        font-size: 2rem;
+    }
+
+    .direct-chat h2 {
+        font-size: 3rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
     header {
         height: 10vh;
         padding: 10px;
@@ -1789,7 +1811,7 @@ footer p {
         position: static;
     }
 
-    .heroText .btn2  {
+    .heroText .btn2 {
         display: none;
     }
 
