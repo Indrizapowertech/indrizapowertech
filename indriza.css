@@ -194,21 +194,59 @@ textarea:focus {
 
 .social-icons {
     display: flex;
+    justify-content: center;
+    /* display: inline-flex;
+    justify-content: center; */
     gap: 15px;
 }
 
-.social-icons a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
+.social-icons .whatsapp {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #25D366;
+    color: white;
+    font-size: 28px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    margin-top: 15px;
 }
 
-.social-icons a .fa-brands {
+.whatsapp:hover {
+    transform: scale(1.1);
+    background-color: #1ebe5d;
+}
+
+.social-icons .tiktok {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-size: 28px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    margin-top: 15px;
+}
+
+.tiktok:hover {
+    transform: scale(1.1);
+    background-color: black;
+}
+
+
+/* .social-icons a .fa-brands {
     width: 100%;
     height: 100%;
     color: var(--primary-dark);
     font-size: x-large;
-}
+} */
 
 .hero {
     height: 100vh;
@@ -694,12 +732,32 @@ textarea:focus {
     text-decoration: none;
     transition: transform 0.2s ease;
     margin-top: 15px;
-    /* space above */
 }
 
 .whatsapp-btn:hover {
     transform: scale(1.1);
     background-color: #1ebe5d;
+}
+
+.tiktok-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-size: 28px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    margin-top: 15px;
+    /* space above */
+}
+
+.tiktok-btn:hover {
+    transform: scale(1.1);
+    background-color: black;
 }
 
 
@@ -1665,6 +1723,7 @@ footer p {
     .social-icons {
         justify-content: center;
     }
+
     header {
         height: 10vh;
         padding: 10px;
